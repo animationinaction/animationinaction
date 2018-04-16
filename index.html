@@ -3,19 +3,19 @@
     <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
     <script>
       function init() {
-        var stage = new createjs.Stage("demoCanvas");
-        var circle = new createjs.Shape();
-        circle.graphics.beginFill("#d35454").drawCircle(0, 0, 92);
-        circle.x = 400;
-        circle.y = 100;
-        stage.addChild(circle);
-        createjs.Tween.get(circle, {loop: true})
+        var st = new createjs.Stage("demoCanvas");
+        var ci = new createjs.Shape();
+        ci.graphics.beginFill("#d35454").drawCircle(0, 0, 92);
+        ci.x = 400;
+        ci.y = 100;
+        st.addChild(ci);
+        createjs.Tween.get(ci, {loop: true})
           .to({ x: 400, y: 400}, 2000)
           .to({ x: 100, y: 400}, 2000)
           .to({ x: 100, y: 100}, 2000)
           .to({ x: 400, y: 100}, 2000)
         createjs.Ticker.setFPS(60);
-        createjs.Ticker.addEventListener("tick", stage);
+        createjs.Ticker.addEventListener("tick", st);
       }
     </script>
   </head>
