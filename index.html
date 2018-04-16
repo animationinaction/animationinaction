@@ -3,7 +3,7 @@
     <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
     <script>
       function init() {
-        var st = new createjs.Stage("demoCanvas");
+        var st = new createjs.Stage("my_canvas");
         var ci = new createjs.Shape();
         ci.graphics.beginFill("#d35454").drawCircle(0, 0, 92);
         ci.x = 400;
@@ -20,7 +20,7 @@
     </script>
   </head>
   <body onload="init();">
-    <canvas id="demoCanvas" width="500" height="500"
-            style="border:5px solid #000000"></canvas>
+    <canvas id="my_canvas" width="500" height="500"
+            style="border:3px solid #000000"></canvas>
   </body>
 </html>
