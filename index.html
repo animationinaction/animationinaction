@@ -11,7 +11,9 @@
         stage.addChild(circle);
         createjs.Tween.get(circle, {loop: true})
           .to({ x: 400, y: 400}, 2000)
-          .to({ x: -75, y: -75}, 2000)
+          .to({ x: 100, y: 400}, 2000)
+          .to({ x: 100, y: 100}, 2000)
+          .to({ x: 400, y: 100}, 2000)
         createjs.Ticker.setFPS(60);
         createjs.Ticker.addEventListener("tick", stage);
       }
