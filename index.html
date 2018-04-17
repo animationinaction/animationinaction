@@ -7,7 +7,10 @@
         myName();
       }
       function myName(){
+        var st = new createjs.Stage("test");
         var name = createjs.text("Jared Nemith", "18px Arial", "ff7700");
+        createjs.Tween.get(name, {loop: true})
+          .to({x: 400, y: 400}, 2000)
       }
       function motionTween() {
         var st = new createjs.Stage("my_canvas");
@@ -40,7 +43,7 @@
   </head>
   <body onload="start();">
     <div id="myName">
-      
+      <canvas id="test" width="400" height="200"></canvas>
     </div>
     <div id="motion">
       <canvas id="my_canvas" width="500" height="500"></canvas>
