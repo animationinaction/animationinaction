@@ -2,10 +2,13 @@
   <head>
     <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
     <script>
-      function shapeTween() {
+      function start(){
+        motionTween();
+      }
+      function motionTween() {
         var st = new createjs.Stage("my_canvas");
         var ci = new createjs.Shape();
-        ci.graphics.beginFill("#d35454").drawCircle(0, 0, 92);
+        ci.graphics.beginFill("#d35454").drawCircle(0, 0, 90);
         ci.x = 400;
         ci.y = 100;
         st.addChild(ci);
@@ -18,10 +21,17 @@
         createjs.Ticker.addEventListener("tick", st);
       }
     </script>
+    #motion {
+      width:500px;height:500px;
+      background-color:#93a4c4;
+    }
   </head>
   <body>
     <div>
-      <style onload="shapeTween();">
+      
+    </div>
+    <div id="motion">
+      <style onload="start();">
         <canvas id="my_canvas" width="500" height="500"
                 style="border:3px solid #000000"></canvas>
       </style>
