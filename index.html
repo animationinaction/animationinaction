@@ -4,6 +4,10 @@
     <script>
       function start(){
         motionTween();
+        myName();
+      }
+      function myName(){
+        var name = createjs.text("Jared Nemith", "18px Arial", "ff7700");
       }
       function motionTween() {
         var st = new createjs.Stage("my_canvas");
