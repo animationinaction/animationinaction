@@ -2,7 +2,10 @@
   <head>
     <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
     <script>
-      
+      function start(){
+        myName();
+        motionTween();
+      }
       function myName(){
         var st = new createjs.Stage("test");
         var name = createjs.Text("Jared Nemith", "18px Arial", "#ff2600");
@@ -18,7 +21,7 @@
         ci.x = 400;
         ci.y = 100;
         st.addChild(ci);
-        createjs.Tween.get(ci, {loop: true})
+        createjs.Tween.get(ci, {loop: false})
           .to({ x: 400, y: 400}, 2000)
           .to({ x: 100, y: 400}, 2000)
           .to({ x: 100, y: 100}, 2000)
@@ -26,7 +29,6 @@
         createjs.Ticker.setFPS(60);
         createjs.Ticker.addEventListener("tick", st);
       }
-      document.getElementById("motion").innerHTML = window.motionTween();
     </script>
     <style>
       #motion {
@@ -41,7 +43,8 @@
       }
     </style>
   </head>
-  <body onload="start();">
+  <body>
+     <button onclick="motionTween()">Click me</button> 
     <div id="myName">
       <canvas id="test" width="400" height="200"></canvas>
     </div>
