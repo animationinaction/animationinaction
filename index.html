@@ -2,10 +2,7 @@
   <head>
     <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
     <script>
-      function start(){
-        myName();
-        motionTween();
-      }
+      
       function myName(){
         var st = new createjs.Stage("test");
         var name = createjs.Text("Jared Nemith", "18px Arial", "#ff2600");
@@ -29,6 +26,7 @@
         createjs.Ticker.setFPS(60);
         createjs.Ticker.addEventListener("tick", st);
       }
+      document.getElementById("motion").innerHTML = window.motionTween();
     </script>
     <style>
       #motion {
