@@ -1,64 +1,115 @@
 <html>
-  <head>
-    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-    <script>
-      function start(){
-        myName();
-        motionTween();
-      }
-      function myName(){
-        var st = new createjs.Stage("test");
-        var name = createjs.Text("Jared Nemith", "18px Arial", "#ff2600");
-        name.x = 50;
-        name.y = 50;
-        st.addChild(name);
-        st.update();
-      }
-      function motionTween() {
-        var st = new createjs.Stage("my_canvas");
-        var ci = new createjs.Shape();
-        ci.graphics.beginFill("#d35454").drawCircle(0, 0, 90);
-        ci.x = 400;
-        ci.y = 100;
-        st.addChild(ci);
-        createjs.Tween.get(ci, {loop: false})
-          .to({ x: 400, y: 350}, 2000)
-          .to({ x: 100, y: 350}, 2000)
-          .to({ x: 100, y: 100}, 2000)
-          .to({ x: 400, y: 100}, 2000)
-        createjs.Ticker.setFPS(60);
-        createjs.Ticker.addEventListener("tick", st);
-      }
-    </script>
-    <style>
-      #motion {
-        width:500px;height:500px;
-        background-color:#93a4c4;
-        border:2px solid #000000;
-      }
-      #myName {
-        width:400px;height:200px;
-        background-color:#999999;
-        border:2px solid #000000;
-        float:left;
-      }
-      #container {
-        width:100%;height:100%;
-        background-color:#2a5191;
-        border:1px dashed #000000;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="container">
-    <div id="motion">
-      <button onclick="motionTween()">Click me</button>
-      <canvas id="my_canvas" width="500" height="500"></canvas>
-    </div>
-    <div id="myName">
-      <button onclick="myName()">Click me</button>
-      <canvas id="test" width="400" height="200"></canvas>
-    </div>
-    </div>
-  </body>
-</html>
+    <head>
+      <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+      <script type="text/javascript" src="tweens.js"></script>
+      <style>
+        #motion {
+          width:30%;height:606px;
+          background-color:#93a4c4;
+          border:2px solid #000000;
+          float:left;
+        }
+        #myName {
+          width:400px;height:200px;
+          background-color:#999999;
+          border:2px solid #000000;
+          float:left;
+        }
+        #container {
+          width:100%;
+          background-color:#2a5191;
+          border:1px dashed #000000;
+          padding:0px;overflow:hidden;
+        }
+        #schoolName{
+          width:400px;height:200px;
+          background-color:#999999;
+          border:2px solid #000000;
+          float:left;
+        }
+        #shapeTween{
+          width:400px;height:200px;
+          background-color:#999999;
+          border:2px solid #000000;
+          float:left;
+        }
+        #nameSecond{
+          width:400px;height:200px;
+          background-color:#999999;
+          border:2px solid #000000;
+          float:left;
+        }
+        #quotediv{
+          width:400px;height:200px;
+          background-color:#999999;
+          border:2px solid #000000;
+          float:left;
+        }
+        #team{
+          width:400px;height:200px;
+          background-color:#999999;
+          border:2px solid #000000;
+          float:left;
+        }
+        #rotate{
+          width:400px;height:200px;
+          background-color:#999999;
+          border:2px solid #000000;
+          float:left;
+        }
+        #same{
+          width:400px;height:200px;
+          background-color:#999999;
+          border:2px solid #000000;
+          float:left;
+        }
+        #link{
+          position:fixed;
+          right:1%;
+          bottom:2%;
+        }
+      </style>
+    </head>
+    <body>
+      <button id="link" onclick="window.location='http://www.wisconsinvirtualschool.org/'">Wisconsin Virtual School</button>
+      <div id="container">
+        <div id="motion">
+          <button onclick="motionTween()">Motion tween</button>
+          <canvas id="my_canvas" width="500" height="606"></canvas>
+        </div>
+        <div id="myName">
+          <button onclick="myName()">My name</button>
+          <canvas id="test" width="400" height="200"></canvas>
+        </div>
+        <div id="schoolName">
+          <button onclick="schoolText()">School text</button>
+          <canvas id="schoolText" width="400" height="200"></canvas>
+        </div>
+        <div id="shapeTween">
+          <button onclick="shapeTween()">Shape tween</button>
+          <canvas id="test2" width="400" height="200"></canvas>
+        </div>
+        <div id="nameSecond">
+          <button onclick="nameSecond()">My name letters</button>
+          <canvas id="names" width="400" height="200"></canvas>
+        </div>
+        <div id="quotediv">
+          <button onclick="quote()">Quote fade</button>
+          <canvas id="qu" width="400" height="200"></canvas>
+        </div>
+        <div id="team">
+          <button onclick="team()">Favorite team</button>
+          <canvas id="tm" width="400" height="200"></canvas>
+        </div>
+        <div id="rotate">
+          <button onclick="rotation()">Rotation</button>
+          <canvas id="rt" width="400" height="200"></canvas>
+        </div>
+        <div id="same">
+          <button onclick="same()">Two animations</button>
+          <canvas id="last" width="400" height="200"></canvas>
+        </div>
+      </div>
+    </body>
+  </html>
+  
