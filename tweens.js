@@ -30,7 +30,7 @@ function same(){
 }
 function rotation(){
     var st = new createjs.Stage("rt");
-    var text = new createjs.Text("Computer Science", "30px Arial", "#f4af00");
+    var text = new createjs.Text("cccccccccccc ccccccc", "30px Arial", "#f4af00");
     text.x = 60;
     text.y = 70;
     text.regX = 35;
@@ -44,7 +44,7 @@ function rotation(){
 }
 function team(){
   var st = new createjs.Stage("tm");
-  var teamName = new createjs.Text("GB Packers", "30px Arial", "#22dd22");
+  var teamName = new createjs.Text("GB team", "30px Arial", "#22dd22");
   teamName.x = 25;
   teamName.y = -50;
   st.addChild(teamName);
@@ -124,7 +124,7 @@ function shapeTween(){
 }
 function schoolText(){
   var st = new createjs.Stage("schoolText");
-  var name = new createjs.Text("Wisconsin Virtual School", "30px Arial", "#fd1111");
+  var name = new createjs.Text("School", "30px Arial", "#fd1111");
   name.x = 35;
   name.y = 65;
   st.addChild(name);
@@ -136,7 +136,7 @@ function schoolText(){
 }
 function myName(){
   var st = new createjs.Stage("test");
-  var name = new createjs.Text("Jared Nemith", "52px Arial", "#ff2600");
+  var name = new createjs.Text("Jared", "52px Arial", "#ff2600");
   name.x = 50;
   name.y = 50;
   //name.textBaseline("alphabetic");
